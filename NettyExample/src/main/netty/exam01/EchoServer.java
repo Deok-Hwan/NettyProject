@@ -38,6 +38,8 @@ public class EchoServer {
 				@Override
 				public void initChannel(SocketChannel ch) {
 					// TODO Auto-generated method stub
+					// initChannel 메서드는 클라이언트 소켓 채널이 생성될 때 자동으로 호출 된다. 이때 채널 파이프라인의
+					// 설정을 수행하게 된다.
 					ChannelPipeline p = ch.pipeline();
 					// 채널 파이프라인 객체를 생성한다.
 					p.addLast(new EchoServerHandler());
