@@ -130,7 +130,6 @@ public class NonBlockingServer {
 	private void writeOP(SelectionKey key) throws IOException 
 	{
 		SocketChannel socketChannel = (SocketChannel)key.channel();
-		
 		List<byte[]> channelData = keepDataTrack.get(socketChannel);
 		Iterator<byte[]> its = channelData.iterator();
 		
